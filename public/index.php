@@ -1,19 +1,15 @@
 <?php
-// Bloque de configuración inicial 
+// Bloque de configuración inicial
 define("SITE_NAME", "TaskFlow");
 $pageTitle = SITE_NAME . " - Página de Inicio";
 $userName = "Alejandro Garcia-Mauriño Salas";
 $userAge = 19;
 $isPremiumUser = true;
 
- HEAD
-//  Crear array de tareas
-
 // Incluir la biblioteca de funciones
 require_once '../app/functions.php';
 
 // Crear array de tareas
-24e7697 (Refactoriza la vista de tareas a funciones (PE3))
 $tasks = [
     ['title' => 'Estudiar PHP', 'completed' => false, 'priority' => 'alta'],
     ['title' => 'Hacer la compra', 'completed' => true, 'priority' => 'media'],
@@ -35,7 +31,6 @@ $tasks = [
 <h2>Tareas Pendientes</h2>
 <ul>
     <?php 
-    // Recorremos las tareas y renderizamos cada una con la función
     foreach ($tasks as $task) {
         echo renderizarTarea($task);
     }
