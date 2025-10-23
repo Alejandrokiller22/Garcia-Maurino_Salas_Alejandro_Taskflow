@@ -1,5 +1,5 @@
 <?php
-// Bloque de configuración inicial (puedes conservarlo)
+// Bloque de configuración inicial 
 define("SITE_NAME", "TaskFlow");
 $pageTitle = SITE_NAME . " - Página de Inicio";
 $userName = "Alejandro Garcia-Mauriño Salas";
