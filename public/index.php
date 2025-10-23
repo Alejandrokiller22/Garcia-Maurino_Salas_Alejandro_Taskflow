@@ -6,7 +6,7 @@ $userName = "Alejandro Garcia-Mauriño Salas";
 $userAge = 19;
 $isPremiumUser = true;
 
-// Paso 2: Crear array de tareas
+//  Crear array de tareas
 $tasks = [
     ['title' => 'Estudiar PHP', 'completed' => false, 'priority' => 'alta'],
     ['title' => 'Hacer la compra', 'completed' => true, 'priority' => 'media'],
