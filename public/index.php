@@ -6,7 +6,14 @@ $userName = "Alejandro Garcia-Mauriño Salas";
 $userAge = 19;
 $isPremiumUser = true;
 
+ HEAD
 //  Crear array de tareas
+
+// Incluir la biblioteca de funciones
+require_once '../app/functions.php';
+
+// Crear array de tareas
+24e7697 (Refactoriza la vista de tareas a funciones (PE3))
 $tasks = [
     ['title' => 'Estudiar PHP', 'completed' => false, 'priority' => 'alta'],
     ['title' => 'Hacer la compra', 'completed' => true, 'priority' => 'media'],
@@ -27,22 +34,12 @@ $tasks = [
 
 <h2>Tareas Pendientes</h2>
 <ul>
-    <?php foreach ($tasks as $task): ?>
-        <?php
-        $taskClasses = 'task-item';
-        if ($task['completed']) $taskClasses .= ' completed';
-
-        switch ($task['priority']) {
-            case 'alta': $taskClasses .= ' priority-alta'; break;
-            case 'media': $taskClasses .= ' priority-media'; break;
-            case 'baja': $taskClasses .= ' priority-baja'; break;
-        }
-        ?>
-        <li class="<?= $taskClasses; ?>">
-            <?= $task['title']; ?>
-        </li>
-    <?php endforeach; ?>
+    <?php 
+    // Recorremos las tareas y renderizamos cada una con la función
+    foreach ($tasks as $task) {
+        echo renderizarTarea($task);
+    }
+    ?>
 </ul>
 
 <?php include '../app/views/footer.php'; ?>
-
