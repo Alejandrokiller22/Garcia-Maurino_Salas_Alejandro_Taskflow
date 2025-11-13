@@ -3,7 +3,8 @@
 
 require_once '../app/functions.php';
 require_once '../app/data.php';
-require_once '../app/controllers/AuthController.php';
+require_once '../controllers/AuthController.php';
+
 
 $accion = $_GET['accion'] ?? 'login';
 
