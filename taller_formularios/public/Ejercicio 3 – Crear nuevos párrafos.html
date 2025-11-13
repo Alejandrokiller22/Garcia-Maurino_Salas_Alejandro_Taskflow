@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 3 DOM</title>
+</head>
+<body>
+  <!-- Título de la actividad -->
+  <h2>Añade párrafos</h2>
+
+  <!-- Aquí se van a añadir los párrafos -->
+  <div id="zonaParrafos"></div>
+
+  <!-- Campo para escribir el nuevo párrafo -->
+  <p>Nuevo párrafo</p>
+  <input type="text" id="inputParrafo">
+
+  <!-- Botón para añadir el párrafo -->
+  <br><br>
+  <button onclick="añadirParrafo()">Añadir párrafo</button>
+
+  <script>
+    // Función que crea un nuevo párrafo y lo añade al div
+    function añadirParrafo() {
+      let texto = document.getElementById("inputParrafo").value;
+
+      // Crear el párrafo
+      let nuevoParrafo = document.createElement("p");
+      nuevoParrafo.textContent = texto;
+
+      // Añadirlo al contenedor
+      document.getElementById("zonaParrafos").appendChild(nuevoParrafo);
+    }
+  </script>
+</body>
+</html>

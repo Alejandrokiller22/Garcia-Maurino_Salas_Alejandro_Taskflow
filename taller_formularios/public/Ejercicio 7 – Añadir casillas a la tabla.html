@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 7 DOM</title>
+</head>
+<body>
+  <h2>Añade casillas a la tabla</h2>
+
+  <!-- Tabla con cabeceras -->
+  <table border="1" id="tablaNotas">
+    <tr>
+      <th>Alumno</th>
+      <th>Calificación</th>
+    </tr>
+  </table>
+
+  <!-- Inputs para añadir datos -->
+  <p>Nombre del alumno:</p>
+  <input type="text" id="inputNombre" placeholder="Nombre"><br><br>
+
+  <p>Calificación:</p>
+  <input type="text" id="inputNota" placeholder="Nota"><br><br>
+
+  <button onclick="añadirElemento()">Añadir elemento</button>
+
+  <script>
+    // Función para añadir una fila nueva a la tabla
+    function añadirElemento() {
+      let nombre = document.getElementById("inputNombre").value;
+      let nota = document.getElementById("inputNota").value;
+
+      if (nombre !== "" && nota !== "") {
+        let tabla = document.getElementById("tablaNotas");
+        let fila = tabla.insertRow();
+
+        let celdaNombre = fila.insertCell(0);
+        let celdaNota = fila.insertCell(1);
+
+        celdaNombre.textContent = nombre;
+        celdaNota.textContent = nota;
+
+        // Limpiar los campos
+        document.getElementById("inputNombre").value = "";
+        document.getElementById("inputNota").value = "";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 4 DOM</title>
+</head>
+<body>
+  <h2>Crea un título y dos secciones.</h2>
+
+  <!-- Inputs para escribir el contenido -->
+  <p>Introduce el título:</p>
+  <input type="text" id="inputTitulo"><br><br>
+
+  <p>Introduce la sección 1:</p>
+  <input type="text" id="inputSec1"><br><br>
+
+  <p>Introduce la sección 2:</p>
+  <input type="text" id="inputSec2"><br><br>
+
+  <!-- Botón para crear el contenido -->
+  <button onclick="crearContenido()">Rellenar</button>
+
+  <!-- Aquí se mostrará el resultado -->
+  <div id="resultado"></div>
+
+  <script>
+    // Función que crea el título y las secciones
+    function crearContenido() {
+      let titulo = document.getElementById("inputTitulo").value;
+      let sec1 = document.getElementById("inputSec1").value;
+      let sec2 = document.getElementById("inputSec2").value;
+
+      let zona = document.getElementById("resultado");
+
+      // Crear y mostrar el título
+      let h1 = document.createElement("h1");
+      h1.textContent = "Título: " + titulo;
+      zona.appendChild(h1);
+
+      // Crear y mostrar la sección 1
+      let s1 = document.createElement("h2");
+      s1.textContent = "Sección 1: " + sec1;
+      zona.appendChild(s1);
+
+      // Crear y mostrar la sección 2
+      let s2 = document.createElement("h2");
+      s2.textContent = "Sección 2: " + sec2;
+      zona.appendChild(s2);
+    }
+  </script>
+</body>
+</html>

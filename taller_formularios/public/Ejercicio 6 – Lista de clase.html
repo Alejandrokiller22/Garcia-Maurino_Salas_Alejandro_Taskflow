@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 6 DOM</title>
+</head>
+<body>
+  <h2>Lista de clase:</h2>
+
+  <!-- Lista donde se añaden los nombres -->
+  <ul id="listaClase">
+    <li>Juan Amador Rubio</li>
+    <li>Gonzalo Astudillo Ortega</li>
+    <li>Luis Blanco Moyano</li>
+    <li>Ana Cabezas Berjillos</li>
+  </ul>
+
+  <!-- Campo para escribir el nuevo nombre -->
+  <p>Nombre:</p>
+  <input type="text" id="inputNombre" placeholder="Nuevo nombre">
+  <button onclick="añadirNombre()">Añadir nombre</button>
+
+  <script>
+    // Función para añadir un nuevo nombre a la lista
+    function añadirNombre() {
+      let nombre = document.getElementById("inputNombre").value;
+
+      if (nombre !== "") {
+        let nuevo = document.createElement("li");
+        nuevo.textContent = nombre;
+        document.getElementById("listaClase").appendChild(nuevo);
+        document.getElementById("inputNombre").value = ""; // limpiar campo
+      }
+    }
+  </script>
+</body>
+</html>

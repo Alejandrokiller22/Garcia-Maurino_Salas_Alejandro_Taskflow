@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 1</title>
+</head>
+<body>
+  <h1 id="titulo">Título:</h1>
+  <h2 id="seccion1">Sección 1:</h2>
+  <h2 id="seccion2">Sección 2:</h2>
+
+  <p>Introduce el título:</p>
+  <input type="text" id="inputTitulo"><br><br>
+
+  <p>Introduce la sección 1:</p>
+  <input type="text" id="inputSec1"><br><br>
+
+  <p>Introduce la sección 2:</p>
+  <input type="text" id="inputSec2"><br><br>
+
+  <button onclick="rellenar()">Rellenar información</button>
+
+  <script>
+    function rellenar() {
+      document.getElementById("titulo").textContent = "Título: " + document.getElementById("inputTitulo").value;
+      document.getElementById("seccion1").textContent = "Sección 1: " + document.getElementById("inputSec1").value;
+      document.getElementById("seccion2").textContent = "Sección 2: " + document.getElementById("inputSec2").value;
+    }
+  </script>
+</body>
+</html>

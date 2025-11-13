@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 5 DOM</title>
+</head>
+<body>
+  <h2>Crea un título y dos secciones.</h2>
+
+  <!-- Inputs para el título y secciones -->
+  <p>Introduce el título:</p>
+  <input type="text" id="inputTitulo"><br><br>
+
+  <p>Introduce la sección 1:</p>
+  <input type="text" id="inputSec1"><br><br>
+
+  <p>Introduce los párrafos de la primera sección:</p>
+  <input type="text" id="inputParrafo1"><br><br>
+
+  <p>Introduce la sección 2:</p>
+  <input type="text" id="inputSec2"><br><br>
+
+  <p>Introduce los párrafos de la segunda sección:</p>
+  <input type="text" id="inputParrafo2"><br><br>
+
+  <!-- Botón para rellenar -->
+  <button onclick="crearTodo()">Rellenar</button>
+
+  <!-- Zona donde se mostrará el contenido -->
+  <div id="resultado"></div>
+
+  <script>
+    // Función que crea el título, secciones y párrafos
+    function crearTodo() {
+      let titulo = document.getElementById("inputTitulo").value;
+      let sec1 = document.getElementById("inputSec1").value;
+      let parrafo1 = document.getElementById("inputParrafo1").value;
+      let sec2 = document.getElementById("inputSec2").value;
+      let parrafo2 = document.getElementById("inputParrafo2").value;
+
+      let zona = document.getElementById("resultado");
+
+      // Crear título
+      let h1 = document.createElement("h1");
+      h1.textContent = "Título: " + titulo;
+      zona.appendChild(h1);
+
+      // Sección 1 y su párrafo
+      let s1 = document.createElement("h2");
+      s1.textContent = "Sección 1: " + sec1;
+      zona.appendChild(s1);
+
+      let p1 = document.createElement("p");
+      p1.textContent = parrafo1;
+      zona.appendChild(p1);
+
+      // Sección 2 y su párrafo
+      let s2 = document.createElement("h2");
+      s2.textContent = "Sección 2: " + sec2;
+      zona.appendChild(s2);
+
+      let p2 = document.createElement("p");
+      p2.textContent = parrafo2;
+      zona.appendChild(p2);
+    }
+  </script>
+</body>
+</html>

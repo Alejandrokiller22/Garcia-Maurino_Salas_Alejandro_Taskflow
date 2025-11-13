@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejercicio 2 DOM</title>
+</head>
+<body>
+  <!-- Título original -->
+  <h2 id="titulo">Este es el título que vamos a cambiar</h2>
+
+  <!-- Campo para escribir el nuevo título -->
+  <p>Puedes modificar el título, introduciendo el nuevo título en el campo de texto y pulsando el botón cambiar título</p>
+  <input type="text" id="nuevoTitulo" placeholder="Nuevo título">
+  <button onclick="cambiarTitulo()">Cambiar título</button>
+
+  <script>
+    // Función para cambiar el texto del título
+    function cambiarTitulo() {
+      let nuevo = document.getElementById("nuevoTitulo").value;
+      document.getElementById("titulo").textContent = nuevo;
+    }
+  </script>
+</body>
+</html>
+
